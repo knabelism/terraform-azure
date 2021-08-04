@@ -1,18 +1,18 @@
-provider "azurerm" {
-  features {}
+# provider "azurerm" {
+#   features {}
 
-  subscription_id = var.subscriptionID
-  skip_provider_registration = true
-}
+#   subscription_id = var.subscriptionID
+#   skip_provider_registration = true
+# }
 
-terraform {
-    backend "remote" {
-        organization = "akauto"
-        workspaces {
-            name = "automation_platform"
-        }
-    }
-}
+# terraform {
+#     backend "remote" {
+#         organization = "akauto"
+#         workspaces {
+#             name = "automation_platform"
+#         }
+#     }
+# }
 
 resource "azurerm_resource_group" "automation_platform" {
   location = var.location

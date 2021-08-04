@@ -10,7 +10,7 @@ variable "admin_username" {
   default = "knabelism"
 }
 
-variable "RGName" {
+variable "resourcegroup" {
   type = string
 }
 
@@ -26,7 +26,7 @@ variable "clientID" {
   type = string
 }
 
-variable "clinetSecret" {
+variable "clientSecret" {
   type = string
 }
 
