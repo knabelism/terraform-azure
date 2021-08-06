@@ -1,8 +1,8 @@
 terraform {
-    backend "remote" {
-        organization = "akauto"
-        workspaces {
-            name = "automation_platform"
-        }
+  backend "remote" {
+    organization = "akauto"
+    workspaces {
+      name = "automation_platform"
     }
+  }
 }
