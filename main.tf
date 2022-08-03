@@ -14,13 +14,13 @@
 #     }
 # }
 
-resource "azurerm_resource_group" "automation_platform" {
-  location = var.location
-  name     = "automation_platform"
-  tags     = {}
+# resource "azurerm_resource_group" "automation_platform" {
+#   location = var.location
+#   name     = "automation_platform"
+#   tags     = {}
 
-  timeouts {}
-}
+#   timeouts {}
+# }
 
 resource "azurerm_virtual_network" "automation_platform_vnet" {
   address_space = [
