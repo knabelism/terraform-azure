@@ -11,6 +11,10 @@ variable "admin_username" {
   default = "knabelism"
 }
 
+variable "admin_password" {
+  default = "C0d1g0!@#"
+}
+
 variable "resourcegroup" {
   type = string
 }
