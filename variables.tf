@@ -1,5 +1,5 @@
 variable "vm_prefix" {
-  default = "oracle-automation-manager"
+  default = "awx"
 }
 
 variable "server_count" {
