@@ -100,7 +100,7 @@ resource "azurerm_linux_virtual_machine" "automation_platform_server" {
   source_image_reference {
     offer     = "RHEL"
     publisher = "RedHat"
-    sku       = "8_4"
+    sku       = "8_6"
     version   = "latest"
   }
 
