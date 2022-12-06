@@ -1,9 +1,9 @@
-provider "azurerm" {
-  features {}
+# provider "azurerm" {
+#   features {}
 
-  subscription_id = var.subscriptionID
-  skip_provider_registration = true
-}
+#   subscription_id = var.subscriptionID
+#   skip_provider_registration = true
+# }
 
 # terraform {
 #     backend "remote" {
@@ -13,6 +13,16 @@ provider "azurerm" {
 #         }
 #     }
 # }
+
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=3.0.0"
+    }
+  }
+}
+
 
 resource "azurerm_resource_group" "automation_platform" {
   location = var.location
