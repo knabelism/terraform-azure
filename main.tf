@@ -121,7 +121,6 @@ resource "azurerm_postgresql_server" "example" {
   name                = "${var.vm_prefix}-postgresql-db-vm"
   location            = azurerm_resource_group.automation_platform.location
   resource_group_name = azurerm_resource_group.automation_platform.name
-  admin_username      = var.admin_username
 
   administrator_login          = "knabelism"
   administrator_login_password = "codigo123"
