@@ -116,3 +116,25 @@ resource "azurerm_linux_virtual_machine" "automation_platform_server" {
 
   timeouts {}
 }
+
+resource "azurerm_postgresql_server" "example" {
+  name                = "${var.vm_prefix}${format("%02d", count.index)}-postgresql-db-vm"
+  location            = azurerm_resource_group.automation_platform.location
+  resource_group_name = azurerm_resource_group.automation_platform.name
+  admin_username      = var.admin_username
+
+  administrator_login          = "knabelism"
+  administrator_login_password = "codigo123"
+
+  sku_name   = "B_Gen5_2"
+  version    = "11"
+  storage_mb = 100000
+
+  backup_retention_days        = 7
+  geo_redundant_backup_enabled = false
+  auto_grow_enabled            = true
+
+  public_network_access_enabled    = true
+  ssl_enforcement_enabled          = true
+  ssl_minimal_tls_version_enforced = "TLS1_2"
+}
