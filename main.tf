@@ -123,7 +123,7 @@ resource "azurerm_postgresql_server" "automation_platform_postgresql_db_server" 
   resource_group_name = azurerm_resource_group.automation_platform.name
 
   administrator_login          = "knabelism"
-  administrator_login_password = "codigo123"
+  administrator_login_password = "C0d1g0!@#"
 
   sku_name   = "B_Gen5_2"
   version    = "11"
