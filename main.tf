@@ -117,7 +117,7 @@ resource "azurerm_linux_virtual_machine" "automation_platform_server" {
   timeouts {}
 }
 
-resource "azurerm_postgresql_server" "example" {
+resource "azurerm_postgresql_server" "automation_platform_postgresql_db_server" {
   name                = "${var.vm_prefix}-postgresql-db-vm"
   location            = azurerm_resource_group.automation_platform.location
   resource_group_name = azurerm_resource_group.automation_platform.name
